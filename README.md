@@ -17,7 +17,7 @@ Researchers upload a protein structure file (.pdb) and the app computes how flex
 ### Analytics & Education
 - Upload any `.pdb` protein structure file
 - Computes Gaussian Network Model (GNM) dynamics using ProDy
-- Shows a live **3D flexibility map** — red = highly flexible, blue = rigid
+- Shows a live **3D flexibility map** - red = highly flexible, blue = rigid
 - **Per-residue flexibility chart** showing all hinge peaks
 - **Residue fluctuation table** sortable and exportable as CSV
 - AI-powered structural insights via Gemini API
