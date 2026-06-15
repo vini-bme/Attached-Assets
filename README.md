@@ -1,54 +1,84 @@
 # FlexiMap Suite
 
-## Project Overview
-FlexiMap Suite is a computational bioinformatics platform developed for the 2026 Google Solution Challenge. The tool is designed to assist researchers in drug discovery by visualizing protein flexibility and identifying allosteric mapping pathways. By utilizing Elastic Network Models (ENM), the suite highlights conserved hinges and dynamic residues that are critical for therapeutic targeting.
+A computational biology web app for protein flexibility analysis and allosteric drug discovery. Built for the **Google Solution Challenge 2026**.
 
-## Key Features
-* **Allosteric Site Identification:** Automated detection of non-orthosteric binding sites through per-residue dynamic analysis.
-* **Structural Comparative Analysis:** Normalized overlay charts for comparing flexibility profiles across multiple protein structures.
-* **Interactive 3D Visualization:** High-fidelity molecular rendering for real-time structural inspection.
-* **AI-Driven Interpretation:** Automated insights into the functional implications of identified protein hinges.
+**Live Demo:** https://attached-assets--vini36931052006.replit.app
 
-## Technical Stack
-* **Language:** Python 3.10+, TypeScript 5.0+
-* **Backend:** Flask, ProDy, Biopython, NumPy, SciPy
-* **Frontend:** React, Vite, Tailwind CSS
-* **Environment:** Replit Nix-based infrastructure
+---
 
-## Installation and Local Development
-To run the project locally, ensure you have Python and Node.js installed.
+## What it does
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/vini-bme/Attached-Assets.git](https://github.com/vini-bme/Attached-Assets.git)
-   cd Attached-Assets
+Researchers upload a protein structure file (.pdb) and the app computes how flexible each part of the protein is. Flexible regions (called hinges) are the best spots to target with drugs. FlexiMap makes this analysis fast and visual.
 
-2. **Install Backend Dependencies:**
-   ```bash
-   pip install -r requirements.txt
+---
 
-4. **Install Frontend Dependencies:**
-   ```bash
-   npm install
+## Features
 
-6. **Launch the Application:**
-   ```bash
-   python main.py
+### Analytics & Education
+- Upload any `.pdb` protein structure file
+- Computes Gaussian Network Model (GNM) dynamics using ProDy
+- Shows a live **3D flexibility map** — red = highly flexible, blue = rigid
+- **Per-residue flexibility chart** showing all hinge peaks
+- **Residue fluctuation table** sortable and exportable as CSV
+- AI-powered structural insights via Gemini API
+- "For Students" section explains the science in simple terms
 
-## Repository Structure
-* **/src:** Frontend React components and TypeScript logic.
+### Ligand Docking Simulator
+- Enter a peptide or ligand sequence
+- Simulates a docking event against the highest-flexibility hinge region
+- Shows pre-docking vs post-docking comparison
+- Outputs: binding affinity (kcal/mol), conformation shift (RMSD), targetability score, stabilized residues
+- **Stabilization Map** shows which residues got locked after docking
 
-* **/public:** Static assets and structural data files.
+### Pocket Profiler
+- Lists the top 15 most flexible residues ranked by GNM fluctuation
+- Shows polarity, charge, and flexibility score for each residue
+- Pocket biochemistry fingerprint: composition, hydropathy, charged residues
+- AI drug profile generation
 
-* **app.py / main.py:** Flask backend entry points.
+### Protein Compare
+- Load two protein structures side by side
+- Overlaid flexibility profiles (normalized charts)
+- Finds **conserved hinge regions** across both proteins with match scores
+- Useful for finding drug targets that work across multiple protein variants
 
-* **requirements.txt:** Python dependency manifest.
+---
 
-* **replit.nix:** System-level configuration for deployment.
+## Tech Stack
 
-## Submission Information
-* **Event:** Google Solution Challenge 2026
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React, TypeScript, Vite, Tailwind CSS |
+| Backend | Python, Flask |
+| Biology | ProDy, Biopython, NumPy, SciPy |
+| AI | Gemini API |
+| Platform | Replit |
 
-* **Project Status:** MVP (Minimum Viable Product)
+---
+
+## How to run locally
+
+```bash
+# Clone the repo
+git clone https://github.com/vini-bme/Attached-Assets.git
+cd Attached-Assets
+
+# Install frontend dependencies
+npm install
+
+# Install backend dependencies
+pip install -r requirements.txt
+
+# Start the app
+python main.py
+```
+
+Open http://localhost:5000 in your browser.
+
+---
+
+## Project Status
+
+MVP complete. Submitted to Google Solution Challenge 2026.
 
 * **Access:** Public Repository
