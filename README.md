@@ -2,7 +2,7 @@
 
 A computational biology web app for protein flexibility analysis and allosteric drug discovery. Built for the **Google Solution Challenge 2026**.
 
-**Demo video:** [https://attached-assets--vini36931052006.replit.app](https://drive.google.com/drive/folders/1kfeIriCh-iAv-YcGXROB-QWxcAGqMjOt?usp=sharing)
+**Demo video:** [https://drive.google.com/drive/folders/1kfeIriCh-iAv-YcGXROB-QWxcAGqMjOt?usp=sharing]
 
 ---
 
